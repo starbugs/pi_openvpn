@@ -14,6 +14,7 @@
 # will be pulling certain config file directives
 # from the server.
 client
+auth-nocache
 
 # Use the same setting as you are using on
 # the server.
@@ -90,7 +91,8 @@ persist-tun
 # your server certificates with the nsCertType
 # field set to "server".  The build-key-server
 # script in the easy-rsa folder will do this.
-#ns-cert-type server
+# https://openvpn.net/community-resources/how-to/#mitm
+remote-cert-tls server
 
 # Select a cryptographic cipher.
 # If the cipher option is used on the server
